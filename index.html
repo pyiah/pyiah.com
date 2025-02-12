@@ -1,17 +1,181 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CodingForUs</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="images/VMUP9160.png">
+        <!-- This is what the name of the website it -->
+        <title>  Bibbity Bib Bob </title>
+        <!-- This is how to do a favicon. This puts that image by the title -->
+        <link rel="icon" type="image/jpg" href="images/bob favicon.png">
     </head>
+
     <body>
-        <h1 id="header_one">Coding Body</h1>
-        <p id="para_one" class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum fuga doloribus illo eum at consectetur, repellendus dignissimos doloremque possimus dolores accusantium ipsa voluptatibus? Eum, impedit. Assumenda fugiat architecto est!</p>
-        <p id="para_two" class="blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum fuga doloribus illo eum at consectetur, repellendus dignissimos doloremque possimus dolores accusantium ipsa voluptatibus? Eum, impedit. Assumenda fugiat architecto est!</p>
-        <p id="para_thre" class="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum fuga doloribus illo eum at consectetur, repellendus dignissimos doloremque possimus dolores accusantium ipsa voluptatibus? Eum, impedit. Assumenda fugiat architecto est!</p>
-        <div id="box1"> </div>
-        <button class="button" style="font-size: 15px" id="button1">Click me</button>
-        <script src="backend.js"></script>
-    </body>
+        <header>
+            <h1> bob bob bob bob bob </h1>
+            <a href="">bob</a>
+            <a href="">bob</a>
+            <a href="">bob</a>
+            <!-- hr makes a line -->
+             <hr>
+             <!-- br makes a space vertically. -->
+            <br>
+  
+        </header>
+       <!-- href sets the link
+       target sets where to open the link.
+       if undefined target it opens in the same tab
+       if _blank it opens in new tab
+       title sets what text you see when you hover over the text
+  -->
+        <main>
+            <a href="https://www.google.com"
+            target="_blank"
+            title="Goes to google">
+            click me please
+            </a>
+
+            <br>
+
+            <!-- You can also link to other files -->
+            <a href = "lyrics.html">
+                song lyrics 
+            </a>
+
+            <br>
+            <!-- this is how you can redirect someone to mail-->
+            <a href="mailto:zacharythomasbennett@gmail.com">
+                Mail Test
+            </a>
+
+            <br><br><br>
+            <!-- This is how to show an image, gifs also work
+                the alt provides a description of the picture when you copy it
+                you can provide a height and width
+                if you set only a height/width it auto adjusts
+                (added pictures to 'images' folder.
+                image now preceded with images/ aka
+                folder name)
+                -->
+            <h2>This is Mr. TR</h2>
+            <img src="images/VMUP9160.png"
+            alt="This is a picture Mr.TR"
+            width="300" >
+
+            <br><br>
+            <!-- Gif example w/ img -->
+            <h2> This is a cute cat</h2>
+            <br>
+            <img src="images/cute-cat.gif"
+            alt="Cute Cat"
+            width="200">
+
+
+            <br><br><hr><br><br>
+
+            <!-- How to use audio, lots of the stuff can be omitted and still work. -->
+
+                <p>
+                <h3>
+                    Read My Lips Time To Party
+                </h3>
+                </p>
+            <audio controls autoplay muted loop>
+                    <source src="music/Read My Lips Time To Party - Everet Almond.mp3" type="audio/mpeg">
+                    <source src="music/Read My Lips Time To Party - Everet Almond.wav" type="audio/wav">
+            </audio>
+
+            <br><br>
+            <!-- How to play a video. You use similar functions as audio -->
+            <video src="videos/HYJS6884.MP4" width="500px" controls autoplay muted loop>
+                <source src="videos/HYJS6884.MP4" type="video/mp4">
+            </video>
+
+
+
+
+            <!-- How to do prompts aka forms like username and password input boxes.
+                There are many different types of forms that take different parameters and 
+                have different properties. -->
+            <br><br><br>
+
+            <form action="index.php" method="POST" enctype="multipart/form-data">
+
+            <!--Type is text-->
+
+                <label for="username: ">Username: </label>
+                <input type="text" id="username" placeholder="Bob" minlength="6" maxlength="15" required>
+                <br><br>
+
+                <!--Type is password-->
+                <label for="password: ">Password: </label>
+                <input type="password" id="password" placeholder=" " minlength="6" maxlength="20" required>
+                <br><br>
+
+                <!--Type is email-->
+                <label for="email: ">Email: </label>
+                <input type="email" id="Email" placeholder="someone@bob.com" required>
+                <br><br>
+
+                <!--Type is tel aka telephone-->
+                <label for="phone: ">Phone #: </label>
+                <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br><br>
+
+                <!--Type is date-->
+                <label for="bday: ">Birthdate: </label>
+                <input type="date" id="bday" required>
+                <br><br>
+
+                <!--Type is number-->
+                <label for="quantity: ">Quantity: </label>
+                <input type="number" id="quantity" min="0" max="99" value="0" required>
+                <br><br>
+
+                <!--Type is radio buttons. the name= attribute connects all the buttons-->
+            <h4> <label for="title">Title: </label> </h4>
+                <br>
+                <label for="Mr. ">Mr. </label>
+                <input type="radio" id="Mr." value="Mr." name="title">
+                <br>
+                <label for="title">Ms. </label>
+                <input type="radio" id="Ms." value="Ms." name="title">
+                <br>
+                <label for="title">Dr. </label>
+                <input type="radio" id="Dr." value="Dr." name="title">
+                <br><br>
+
+                <!-- shows how to use select type-->
+                <label for="payment">Payment: </label>
+                <select id="payment">
+                    <option value="visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="Gift Card">GiftCard</option>
+                </select>
+                <br><br>
+
+                <!--Example of a checkbox-->
+                <label for="Newsletter">Subscribe to get weekly updates: </label>
+                <input type="checkbox" id="Subscribe">
+                <input type="checkbox" id="!Subscribe">
+                <br><br>
+                <!--Example of comment-->
+                <h3><label for="comment">If you have suggestions feel free to share!</label></h3>
+                <textarea id="comment" rows="2" cols="25"></textarea>
+                <br><br>
+
+                <!--File submission example-->
+                <label for="file">File: </label>
+                <input type="file" id="file" accept="image/png, image/jpeg, image/text">
+                <!--Type is submit/reset buttons-->
+                <input type="submit">
+                <input type="reset">
+            </form>
+         </main>
+
+         <footer>
+            <hr>
+            Author: Bob Pyiaah <br>
+            &copy; Copyright reserved
+            <small><a href="mailto:zacharythomasbennett@gmail.com"></a></small>
+         </footer>
+        </body>
+
 </html>
